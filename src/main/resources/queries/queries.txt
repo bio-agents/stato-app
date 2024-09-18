@@ -1,0 +1,84 @@
+===tests,Statistical tests,These queries demonstrate STATO definitions related to <a href="http://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm">statistical tests, i.e. the mechanisms to make quantitative decisions about a process or processes</a>.
+
+#queries per objectives
+
+Which <span class='highlight'>statistical tests</span> may be used to test <span class='highlight'>association between categorical variables</span>?
+'statistical hypothesis test' and achieves_planned_objective some 'association between categorical variables testing objective'
+
+Which <span class='highlight'>statistical tests</span> evaluate <span class='highlight'>group difference</span>?
+'statistical hypothesis test' and achieves_planned_objective some 'between group comparison objective'
+
+Which <span class='highlight'>statistical tests</span> evaluate <span class='highlight'>goodness of fit</span>?
+'statistical hypothesis test' and achieves_planned_objective some 'goodness of fit testing objective'
+
+What are the <span class='highlight'>statistical tests</span> which can be used to test <span class='highlight'>within subject variation</span>?
+'statistical hypothesis test' and achieves_planned_objective some 'within subject comparison objective'
+
+Which <span class='highlight'>statistical tests</span> evaluate <span class='highlight'>homogeneity hypothesis</span>?
+'statistical hypothesis test' and achieves_planned_objective some 'homogeneity test objective'
+
+Which <span class='highlight'>statistical tests</span> evaluate if <span class='highlight'>sphericity hypothesis</span> holds?
+'statistical hypothesis test' and achieves_planned_objective some 'sphericity testing objective'
+
+Which <span class='highlight'>statistical tests</span> evaluate <span class='highlight'>variance equality</span>?
+'statistical hypothesis test' and achieves_planned_objective some 'equal variance testing objective'
+
+Which <span class='highlight'>statistical tests</span> require the <span class='highlight'>variance equality hypothesis</span> to be true?
+'statistical hypothesis test' and 'has part' some ('homoskedasticity hypothesis' and 'has value' value true)
+
+Which <span class='highlight'>statistical tests</span> may be applied for group comparison if both <span class='highlight'>normality and equivariance hypotheses</span> are met?
+'statistical hypothesis test' and  achieves_planned_objective some 'between group comparison objective' and 'has part' some ('normal distribution hypothesis' and 'has value' value true) and 'has part' some ('homoskedasticity hypothesis' and 'has value' value true)
+
+Which <span class='highlight'>statistical tests</span> use a <span class='highlight'>contingency table</span>?
+'statistical hypothesis test' and has_specified_input some 'contingency table'
+
+Which <span class='highlight'>statistical tests</span> make use of <span class='highlight'>variable ranking</span>?
+'statistical hypothesis test' and 'has part' some ranking
+
+Which <span class='highlight'>statistical tests</span> relies on an <span class='highlight'>F-distribution</span>?
+'statistical hypothesis test' and has_specified_input some F-distribution
+
+===plots,Statistical plots,These queries show some of the STATO definitions related to statistical plots, i.e. graphical representations that are useful for statistical analysis.
+
+Which <span class='highlight'>plots</span> may be used to represent the results of a <span class='highlight'>genetic association study</span>?
+graph and 'is about' some 'genetic association study' or is_specified_output_of some ('data visualization' and 'genetic association study')
+
+Which <span class='highlight'>plots</span> may be used to represent the results of a <span class='highlight'>meta-analysis</span>?
+is_specified_output_of some ('data visualization' and ('is preceded by' some 'meta analysis'))
+
+Which <span class='highlight'>plots</span> use <span class='highlight'>effect size estimate</span>?
+graph and 'has part' some (axis and denotes some 'effect size estimate')
+
+Which <span class='highlight'>plots</span> may be used to render a <span class='highlight'>differential expression analysis</span>?
+graph and is_specified_output_of some ('gene list visualization' and ('is preceded by' some 'differential expression analysis data transformation'))
+
+Which <span class='highlight'>plots</span> provide insights into the performance of a <span class='highlight'>binary classification</span>?
+graph and 'is about' some  (assay or 'statistical hypothesis test' or 'binary classification')
+
+Which <span class='highlight'>plots</span> provide insights into <span class='highlight'>similarity between two distributions</span>?
+graph and is_specified_output_of some ('data visualization' and ('is about' exactly 2 'probability distribution'))
+
+===measures,Statistical measures,These queries exemplify some of the STATO constructs related to statistical measures, i.e. a quantitative summary values.
+
+Which <span class='highlight'>correlation coefficient</span> can be calculated using <span class='highlight'>two ordinal variables</span>?
+'correlation coefficient' and 'is about' exactly 2 'ordinal variable'
+
+Which <span class='highlight'>statistical measures</span> give an insight into <span class='highlight'>central tendency</span>?
+'measure of central tendency'
+
+Which <span class='highlight'>statistical measures</span> are indicative of <span class='highlight'>data spread</span>?
+'measure of variation'
+
+Which <span class='highlight'>statistical measures</span> may be use to provide <span class='highlight'>an estimate of the effect size</span>?
+'effect size estimate'
+
+===designs,Study designs,These queries provide some of the experimental design concepts represented in STATO.
+
+Which <span class='highlight'>study designs</span> use <span class='highlight'>blocking variables</span>?
+'study design' and declares some 'blocking variable'
+
+Which <span class='highlight'>study designs</span> uses <span class='highlight'>time</span> as <span class='highlight'>blocking variable</span>?
+'study design' and declares some ('blocking variable' and 'is about' some 'time sampled measurement data set')
+
+Which <span class='highlight'>study designs</span> uses <span class='highlight'>exactly two blocking variables</span>?
+'study design' and declares exactly 2 'blocking variable'
